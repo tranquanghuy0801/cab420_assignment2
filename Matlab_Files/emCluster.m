@@ -20,7 +20,7 @@ if (nargin < 5) tol=1e-6;       end;
 if (nargin < 4) nIter=100;      end;
 if (nargin < 3) cInit='random'; end;
 
-doPlot = false;
+doPlot = true;
 %doPlot = true;
 
 [N,D] = size(X);                             % get data size
@@ -78,7 +78,7 @@ while (~done)
      if (doPlot && D==2) fig(1); hold on; plotGauss2D(mu(c,:),Sig(:,:,c),'k-','linewidth',2); drawnow; end;
    end;
    alpha = alpha./N;
-   if (doPlot) llplot(iter)=ll; fig(2); plot(1:iter,llplot(1:iter),'b-'); drawnow; end;
+   if (doPlot) llplot(iter)=ll; fig(2); title('Plot the loglikelihood of the returned model'); plot(1:iter,llplot(1:iter),'b-');  drawnow; end;
    %pause(.1);
 
    done = (iter >= nIter) || (abs(ll - llOld)<tol);  % stopping criteria
