@@ -1,3 +1,12 @@
+%% Assignment 2 CAB420
+% Group 22
+% Student: Tran Quang Huy - n10069275
+% Student: Nathan Armishaw - n9157191
+
+% Clear workspace
+clc; clear all; close all;
+warning('off','all');
+
 %% Section A: Bayes Classifiers
 % Code is relevant to parts (A) and (B)
 % Set the Training and Test data as well as other constants related to them
