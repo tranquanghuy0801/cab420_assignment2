@@ -36,8 +36,11 @@ SD2 = 1.5;
 % order polynomial, Gaussian of standard deviation 1 kernels 
 % Use C = 1000 for consistency 
 
-% Use linear kernels for dataset 1  
+% Plot the decision boundary and test errors with the linear models 
 svm_test(@Klinear,[],C,set1_train,set1_test); 
+svm_test(@Klinear,[],C,set2_train,set2_test); 
+svm_test(@Klinear,[],C,set3_train,set3_test); 
+
 % Use second order kernels for dataset 2 
 svm_test(@Kpoly,polyOrder,C,set2_train,set2_test);  
 % Use Gaussian of standard deviation 1 kernels for dataset 3  

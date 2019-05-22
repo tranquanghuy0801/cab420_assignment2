@@ -109,6 +109,7 @@ title('k-means on the data with k = 5');
 plotClassify2D([],X_iris,z5); 
 hold on 
 plot(c5(:,1),c5(:,2),'kx'); 
+title('K-means K = 5'); 
 % Run k-means with k = 20 with k++ intialization 
 figure(8); 
 title('k-means on the data with k = 20'); 
@@ -116,6 +117,7 @@ title('k-means on the data with k = 20');
 plotClassify2D([],X_iris,z20); 
 hold on 
 plot(c20(:,1),c20(:,2),'kx');
+title('K-means K = 20'); 
 
 %% Part C: Run agglomerative clustering on the data 
 
@@ -125,20 +127,20 @@ plot(c20(:,1),c20(:,2),'kx');
 figure(9); 
 subplot(1,2,1); 
 plotClassify2D([],X_iris,z5_min_agg); 
-title('K = 5'); 
+title('K = 5 Min'); 
 subplot(1,2,2); 
 plotClassify2D([],X_iris,z20_min_agg); 
-title('K = 20');
+title('K = 20 Min');
 % Using complete linkage on Iris data 
 [z5_max_agg join] = agglomCluster(X_iris,5,'max'); % k = 5
 [z20_max_agg join] = agglomCluster(X_iris,20,'max'); % k = 20
 figure(10); 
 subplot(1,2,1); 
 plotClassify2D([],X_iris,z5_max_agg); 
-title('K = 5'); 
+title('K = 5 Max'); 
 subplot(1,2,2); 
 plotClassify2D([],X_iris,z20_max_agg); 
-title('K = 20');
+title('K = 20 Max');
 
 %% Part D: Run the EM Gaussian Mixture Model 
 % set doPlot = true to observe the evolution of mixture components's locations and shapes 
